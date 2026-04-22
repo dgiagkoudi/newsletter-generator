@@ -1,0 +1,9 @@
+type,name,description,image_url,url,price_current,price_old,cta_label,cta_url
+hero,,,https://images.pexels.com/photos/1405691/pexels-photo-1405691.jpeg,https://www.pexels.com/el-gr/photo/1405691/,,,,
+single,New blog,Learn about tips and hacks.,https://images.pexels.com/photos/6335635/pexels-photo-6335635.jpeg,https://www.pexels.com/el-gr/photo/6335635/,,,Read now,https://www.pexels.com/el-gr/photo/6335635/
+grid,Product 1,Short description about product 1,https://images.pexels.com/photos/7553846/pexels-photo-7553846.jpeg,https://www.pexels.com/el-gr/photo/7553846/,49€,69€,Buy now,https://www.pexels.com/el-gr/photo/7553846/
+grid,Product 2,Short description about product 2,https://images.pexels.com/photos/876441/pexels-photo-876441.jpeg,https://www.pexels.com/el-gr/photo/876441/,59€,69€,Buy now,https://www.pexels.com/el-gr/photo/876441/
+row,Product 3,Limited offer,https://images.pexels.com/photos/6243808/pexels-photo-6243808.jpeg,https://www.pexels.com/el-gr/photo/6243808/,39€,59€,Buy now,https://www.pexels.com/el-gr/photo/6243808/
+single,Product 4,Best seller of the month,https://images.pexels.com/photos/3977218/pexels-photo-3977218.jpeg,https://www.pexels.com/el-gr/photo/3977218/,99€,,Buy now,https://www.pexels.com/el-gr/photo/3977218/
+grid,Category 1,See more products,https://images.pexels.com/photos/3513221/pexels-photo-3513221.jpeg,https://www.pexels.com/el-gr/photo/3513221/,,,See more,https://www.pexels.com/el-gr/photo/3513221/
+grid,Category 2,See more products,https://images.pexels.com/photos/22674129/pexels-photo-22674129.jpeg,https://www.pexels.com/el-gr/photo/22674129/,,,See more,https://www.pexels.com/el-gr/photo/22674129/

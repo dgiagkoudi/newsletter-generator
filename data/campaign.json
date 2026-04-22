@@ -1,0 +1,111 @@
+{
+  "newsletter_id": "March2026",
+
+  "meta": {
+    "preheader": "Email campaign",
+    "browser_url": "%ARCHIVEURL%",
+    "unsubscribe": "%UNSUBSCRIBEURL%"
+  },
+
+  "brand": {
+    "name": "Brand",
+    "logo": "https://images.pexels.com/photos/5987200/pexels-photo-5987200.jpeg",
+    "url": "https://www.pexels.com/el-gr/photo/5987200/",
+    "info": "Some info about the brand"
+  },
+
+  "social": {
+    "facebook": "https://facebook.com/",
+    "instagram": "https://instagram.com/",
+    "youtube": "https://youtube.com/"
+  },
+
+  "sections": [
+    {
+      "type": "hero",
+      "image": "https://images.pexels.com/photos/1405691/pexels-photo-1405691.jpeg",
+      "link": "https://www.pexels.com/el-gr/photo/1405691/"
+    },
+
+    {
+      "type": "single",
+      "name": "New blog",
+      "description": "Learn about tips and hacks.",
+      "image_url": "https://images.pexels.com/photos/6335635/pexels-photo-6335635.jpeg",
+      "url": "https://www.pexels.com/el-gr/photo/6335635/",
+      "cta_label": "Read now",
+      "cta_url": "https://www.pexels.com/el-gr/photo/6335635/"
+    },
+
+    {
+      "type": "grid",
+      "items": [
+        {
+          "name": "Product 1",
+          "price_current": "49€",
+          "price_old": "69€",
+          "image_url": "https://images.pexels.com/photos/7553846/pexels-photo-7553846.jpeg",
+          "url": "https://www.pexels.com/el-gr/photo/7553846/",
+          "description": "Short description about product 1",
+          "cta_label": "Buy now",
+          "cta_url": "https://www.pexels.com/el-gr/photo/7553846/"
+        },
+        {
+          "name": "Product 2",
+          "price_current": "59€",
+          "price_old": "69€",
+          "image_url": "https://images.pexels.com/photos/876441/pexels-photo-876441.jpeg",
+          "url": "https://www.pexels.com/el-gr/photo/876441/",
+          "description": "Short description about product 2",
+          "cta_label": "Buy now",
+          "cta_url": "https://www.pexels.com/el-gr/photo/876441/"
+        }
+      ]
+    },
+
+    {
+      "type": "row",
+      "name": "Product 3",
+      "price_current": "39€",
+      "price_old": "59€",
+      "image_url": "https://images.pexels.com/photos/6243808/pexels-photo-6243808.jpeg",
+      "url": "https://www.pexels.com/el-gr/photo/6243808/",
+      "description": "Limited offer",
+      "cta_label": "Buy now",
+      "cta_url": "https://www.pexels.com/el-gr/photo/6243808/"
+    },
+
+    {
+      "type": "single",
+      "name": "Product 4",
+      "price_current": "99€",
+      "image_url": "https://images.pexels.com/photos/3977218/pexels-photo-3977218.jpeg",
+      "url": "https://www.pexels.com/el-gr/photo/3977218/",
+      "description": "Best seller of the month",
+      "cta_label": "Buy now",
+      "cta_url": "https://www.pexels.com/el-gr/photo/3977218/"
+    },
+
+    {
+      "type": "grid",
+      "items": [
+        {
+          "name": "Category 1",
+          "description": "See more products",
+          "image_url": "https://images.pexels.com/photos/3513221/pexels-photo-3513221.jpeg",
+          "url": "https://www.pexels.com/el-gr/photo/3513221/",
+          "cta_label": "See more",
+          "cta_url": "https://www.pexels.com/el-gr/photo/3513221/"
+        },
+        {
+          "name": "Category 2",
+          "description": "See more products",
+          "image_url": "https://images.pexels.com/photos/22674129/pexels-photo-22674129.jpeg",
+          "url": "https://www.pexels.com/el-gr/photo/22674129/",
+          "cta_label": "See more",
+          "cta_url": "https://www.pexels.com/el-gr/photo/22674129/"
+        }
+      ]
+    }
+  ]
+}

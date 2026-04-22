@@ -1,0 +1,8 @@
+<tr>
+  <td align="center" style="padding:20px;">
+    {{#if item.image.url}}
+      <img src="{{item.image.url}}" alt="{{item.image.alt}}" width="80%" style="display:block;border:0;">
+    {{/if}}
+    {{> card item=item}}
+  </td>
+</tr>

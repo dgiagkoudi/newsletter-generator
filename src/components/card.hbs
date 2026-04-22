@@ -1,0 +1,27 @@
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center">
+      <strong style="display:block;margin-top:10px;">
+        {{item.name}}
+      </strong>
+      {{#if item.description}}
+        <span style="color:#666;font-size:14px;line-height:1.4;">
+          {{item.description}}
+        </span><br><br>
+      {{/if}}
+      {{#if item.price.old}}
+        <span style="text-decoration:line-through;color:#999;font-size:13px;">
+          {{item.price.old}}
+        </span><br>
+      {{/if}}
+      {{#if item.price.current}}
+        <span style="color:#e60023;font-weight:bold;font-size:16px;">
+          {{item.price.current}}
+        </span><br>
+      {{/if}}
+      {{#if item.cta.url}}
+        {{> button url=item.cta.url label=item.cta.label}}
+      {{/if}}
+    </td>
+  </tr>
+</table>

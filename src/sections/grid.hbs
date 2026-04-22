@@ -1,0 +1,21 @@
+<tr>
+  <td style="padding:20px;">
+    <table width="100%">
+      <tr>
+        <td width="50%" align="center" valign="top">
+          {{#if c1.image.url}}
+            <img src="{{c1.image.url}}" alt="{{c1.image.alt}}" width="80%" style="display:block;border:0;">
+          {{/if}}
+          {{> card item=c1}}
+        </td>
+
+        <td width="50%" align="center" valign="top">
+          {{#if c2.image.url}}
+            <img src="{{c2.image.url}}" alt="{{c2.image.alt}}" width="80%" style="display:block;border:0;">
+          {{/if}}
+          {{> card item=c2}}
+        </td>
+      </tr>
+    </table>
+  </td>
+</tr>

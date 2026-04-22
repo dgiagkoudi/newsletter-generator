@@ -1,0 +1,28 @@
+{
+  "name": "email-generation-tool",
+  "version": "1.0.0",
+  "description": "A dynamic email generation tool using Google Sheets and Handlebars.",
+  "main": "scripts/build.js",
+  "scripts": {
+    "dev": "node scripts/build.js json",
+    "build": "node scripts/build.js json",
+    "build:sheet": "node scripts/build.js sheet"
+  },
+  "keywords": [
+    "email",
+    "newsletter",
+    "contact-pigeon",
+    "html-email"
+  ],
+  "author": "dgiagkoudi",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "chokidar": "^3.6.0",
+    "csvtojson": "^2.0.14",
+    "dotenv": "^17.4.2",
+    "express": "^4.18.0",
+    "googleapis": "^171.4.0",
+    "handlebars": "^4.7.9"
+  }
+}
