@@ -1,77 +1,176 @@
 # Newsletter Generator
+[🇬🇷 Read this in Ελληνικά](./README_GR.md)
 
-Μια εφαρμογή αυτοματισμού για τη δυναμική δημιουργία και διαχείριση Email Newsletters. Το εργαλείο υποστηρίζει Google Sheets API ή τοπικά JSON δεδομένα και τα μετατρέπει σε production-ready HTML, χρησιμοποιώντας modular Handlebars components.
+A newsletter automation tool for dynamically generating and managing HTML email campaigns. The application supports both Google Sheets API and local JSON data sources, transforming them into production-ready HTML emails using modular Handlebars components.
 
-## Περιγραφή
+## Features
 
-Η εφαρμογή παρέχει:
+- Dynamic data sources: Google Sheets API (real-time) or Local JSON files
+- Component-Based Architecture with Handlebars
+- Automated Data Validation
+- Accessibility fallback logic
+- Live Preview Server with Express.js
+- Hot Reloading using Chokidar
+- Production-ready minified HTML output
+- Modular email sections: Hero, Grid, Row, Single
+- Google Sheets → Newsletter transformation pipeline
+- Responsive email structure
 
-- Δυναμική τροφοδοσία δεδομένων: Σύνδεση με Google Sheets (Real-time) ή τοπικό αρχείο JSON.
-- Component-Based Architecture: Διαχωρισμός λογικής και παρουσίασης με χρήση .hbs αρχείων.
-- Automated Validation: Σύστημα ελέγχου ορθότητας δεδομένων.
-- Fallback Logic: Αυτόματη συμπλήρωση στοιχείων για καλύτερη προσβασιμότητα (Accessibility).
-- Live Preview Server: Ενσωματωμένος Express server για άμεση προεπισκόπηση του email στον browser.
-- Hot Reloading: Αυτόματη ανακατασκευή (rebuild) του HTML με τη χρήση Chokidar μόλις ανιχνευθεί αλλαγή στο template.
-- Production-Ready Output: Παραγωγή minified HTML κώδικα στον φάκελο dist, βελτιστοποιημένου για email clients.
+## Tech Stack
 
-## Τεχνολογίες που χρησιμοποιήθηκαν
-
+Core
 - Node.js
 - Handlebars.js
 - Express.js
+
+APIs & Automation
 - Google Sheets API v4
 - Chokidar
 - Dotenv
 
-## Δομή φακέλων
-root/    
-├── data/    
-│  # Πηγές δεδομένων που τροφοδοτούν το περιεχόμενο του newsletter    
-│  ├── campaign.json       
-│  └── campaign - Sheet1.csv   
-│    
-├── dist/      
-│  # Το τελικό, production-ready HTML    
-│  └── March2026.html   
-│    
-├── scripts/       
-│  # Αυτοματισμοί για το build process, το validation και τη σύνδεση με εξωτερικά API    
-│  ├── build.js    
-│  └── sheets.js   
-│    
-├── src/      
-│  └── components/    
-│  │  # Επαναχρησιμοποιήσιμα UI στοιχεία    
-│  │  ├── button.hbs    
-│  │  └── card.hbs       
-│    
-│  └── sections/     
-│  │  # Δομικά blocks περιεχομένου    
-│  │  ├── grid.hbs    
-│  │  ├── hero.hbs    
-│  │  ├── row.hbs    
-│  │  └── single.hbs     
-│    
-│  └── shared/     
-│  │  # Σταθερά τμήματα του template    
-│  │  ├── footer.hbs    
-│  │  └── header.hbs    
-│    
-│  └── templates/         
-│  │  # O κεντρικός σκελετός του email    
-│  │  └── main.hbs       
+## Project Structure
+```bash
+root/
+├── data/
+│  # Data sources used to populate newsletter content
+│  ├── campaign.json
+│  └── campaign - Sheet1.csv
+│
+├── dist/
+│  # Final production-ready HTML output
+│  └── March2026.html
+│
+├── scripts/
+│  # Build process, validation and external API automation scripts
+│  ├── build.js
+│  └── sheets.js
+│
+├── src/
+│  └── components/
+│  │  # Reusable UI components
+│  │  ├── button.hbs
+│  │  └── card.hbs
+│
+│  └── sections/
+│  │  # Content layout blocks
+│  │  ├── grid.hbs
+│  │  ├── hero.hbs
+│  │  ├── row.hbs
+│  │  └── single.hbs
+│
+│  └── shared/
+│  │  # Shared static template parts
+│  │  ├── footer.hbs
+│  │  └── header.hbs
+│
+│  └── templates/
+│  │  # Main email layout template
+│  │  └── main.hbs
+```
 
-## Τοπική εκτέλεση
+## Local Setup
 
-1. Κλωνοποιήστε το repository.  
-2. Εκτελέστε ```npm install``` για να εγκαταστήσετε τα απαραίτητα dependencies.  
-3. Δημιουργήστε ένα αρχείο ```.env``` στο root και προσθέστε το ```SPREADSHEET_ID``` (το ID του Google Sheet από το URL).  
-4. Τοποθετήστε το αρχείο ```credentials.json``` του Google Cloud στον αρχικό φάκελο.
-5. (Google Sheets) Κάντε share το Google Sheet με το email του Service Account (Viewer).
-6. Για Live Preview (Browser): Τρέξτε τον τοπικό server στο http://localhost:3000:
-- Με τοπικά δεδομένα (JSON): ```npm run dev```
-- Με δεδομένα από Google Sheets: ```node scripts/build.js sheet```
-7. Για δημιουργία τελικού αρχείου (Build): Για να παραχθεί το στατικό HTML αρχείο στον φάκελο /dist:
-- Με τοπικά δεδομένα: ```npm run build```
-- Με δεδομένα Google Sheets: ```npm run build:sheet```
-8. Χρήση: Μόλις ολοκληρωθεί το build, ανοίξτε το παραγόμενο αρχείο ```.html``` από τον φάκελο ```dist```, αντιγράψτε τον κώδικα και επικολλήστε τον στον HTML editor της πλατφόρμας αποστολής σας (π.χ. Contact Pigeon).
+1. Clone repository
+
+```bash
+git clone https://github.com/dgiagkoudi/task-manager-auth.git
+
+cd task-manager-auth
+```
+
+2. Install dependencies
+
+```bash
+npm install
+```
+
+3. Create `.env` file
+
+```env
+SPREADSHEET_ID=your_google_sheet_id
+SHEET_NAME=Sheet1
+PORT=3000
+```
+
+4. Google Sheets Setup
+- Create a Google Cloud Service Account
+- Download ```credentials.json```
+- Place it in the root directory
+- Share the Google Sheet with the Service Account email as Viewer
+
+## Run Project
+
+Live Preview using JSON data
+```bash
+npm run dev
+```
+
+Live Preview using Google Sheets
+```bash
+node scripts/build.js sheet
+```
+
+## Production Build
+
+From JSON
+```bash
+npm run build
+```
+
+From Google Sheets
+```bash
+npm run build:sheet
+```
+
+## Output
+
+Generated HTML files are stored inside: ```/dist```.
+
+Output is:
+- Minified
+- Production-ready
+- Optimized for email clients
+
+## Usage
+
+After building:
+
+1. Open generated ```.html```
+2. Copy the HTML code
+3. Paste it into your email platform editor: Contact Pigeon, Mailchimp, Brevo etc.
+
+## Validation System
+
+The build process validates:
+
+- Missing brand logo
+- Missing preheader
+- Invalid section types
+- Missing images
+- Missing titles
+- Empty grids
+
+Critical validation errors stop the build process.
+
+## Supported Section Types
+
+| Type | Description |
+|---|---|
+| hero | Large banner section |
+| grid | Product grid layout |
+| row | Horizontal product row |
+| single | Single featured item |
+
+## Future Improvements
+
+- MJML Support
+- Drag & Drop Builder
+- Multi-language newsletters
+- Template Marketplace
+- Image Optimization Pipeline
+- Email Testing Integration
+- Deployment Pipeline
+
+## License
+
+This project is licensed under the MIT License.
