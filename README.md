@@ -73,9 +73,8 @@ root/
 1. Clone repository
 
 ```bash
-git clone https://github.com/dgiagkoudi/task-manager-auth.git
-
-cd task-manager-auth
+git clone https://github.com/dgiagkoudi/newsletter-generator.git
+cd newsletter-generator
 ```
 
 2. Install dependencies
